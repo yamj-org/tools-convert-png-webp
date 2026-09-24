@@ -1,0 +1,15 @@
+1. Convert png to webp 
+Import file hình ảnh png vào trong folder images trong bin
+Vào inside folder images, tại directory mở cmd
+Gõ lệnh dưới để chuyển tất cả ảnh đang có từ png đến webp
+for %i in (*.png) do ..\cwebp.exe -q 90 -alpha_q 100 "%i" -o "%~ni.webp"
+
+
+2. Convert webp to png
+for %i in (*.webp) do ..\dwebp.exe "%i" -o "%~ni.png"
+
+
+3. Convert webp to jpg
+for %i in (*.webp) do ..\dwebp.exe "%i" -o "%~ni.jpg"
+
+
